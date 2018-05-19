@@ -1,0 +1,276 @@
+---
+title: \vspace{3.5in}"Learn how to github"
+author: "Prepared by: [Sayed Masood Sadat](mailto: sayedmasood.sadat@asiafoundation.org)"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output:
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+---
+
+```{r include=FALSE}
+require(knitr)
+require(tidyverse)
+```
+
+
+\newpage
+
+# Create account and repository on github.com
+
+Go to [`github.com`](https://github.com) and create an account. Once, account is created, create a repository in `Repositories` tab and click on the green button `New`. The following page opens.
+
+&nbsp;
+
+> _**NOTE:** A repository is something like a project folder._
+
+&nbsp;
+
+&nbsp;
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/create repository.jpg")
+```
+
+
+\newpage
+
+# Copy repository URL
+
+After a new repository is created, copy the `clone url` link. This link is used to clone the repository from server to the computer.
+
+&nbsp;
+
+&nbsp;
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/copy clone url.jpg")
+```
+
+\newpage
+
+# Set working directory
+
+On Mac computers, open `Terminal` (the dreaded command line). I am not an expert on `terminal` and it is like a black box to me at this point. But for purpose of using `git`, it is not difficult and we need to know only a few commands.
+
+&nbsp;
+
+> _**NOTE:** To find `terminal`, search spotlight OR go to `Applications` > `Utilities` > `Terminal`._
+
+&nbsp;
+
+The following are important commands for working with directory:
+
+* Check working directory: `pwd`
+* Use `cd` to change working directory.
+    + Go up one folder: `cd ..`
+    + Go into a folder: `cd ~/documents/github`
+* Check content of workding directory: `ls` (or `dir` for windows)
+* Make a new folder: `mkdir [foldername]`
+
+&nbsp;
+
+For our project, we go to our desired directory and create a new folder if necessary.
+
+&nbsp;
+
+So, first thing in the `terminal`, we check the working directory
+
+```{r eval=FALSE}
+pwd
+```
+
+Then, we change the working directory to where we want. I have already a folder called `GitHub` in `Documents`, so I set the working directory there
+
+```{r eval=FALSE}
+cd ~/documents/github
+```
+
+We check the content of our working directory.
+
+```{r eval=FALSE}
+ls
+```
+
+&nbsp;
+
+Here is a screen shot of the process. As you can see, there are already three folders in the working directory.
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/set working directory.jpg")
+```
+
+
+\newpage
+
+# Clone the repository to computer
+
+In the `terminal`, clone the repository in the working directory (i.e. from step 3: `~/Documents/GitHub/`). To do that, we use `git clone` with the url in the terminal command line.
+
+&nbsp;
+
+
+```{r eval=FALSE}
+git clone https://github.com/Masood87/Learn-how-to-github.git
+```
+
+&nbsp;
+
+> _**NOTE:** `git clone` is the first of five git commands we learn here. `git clone` essentially clones the repository into your working directory (in our case it is `~/Documents/GitHub/`)._
+
+&nbsp;
+
+Type `ls` in the `terminal` after `git clone` to see the cloned files.
+
+```{r eval=FALSE}
+ls
+```
+
+Next, change your working directory to the cloned folder `Learn-how-to-github`
+
+```{r eval=FALSE}
+cd Learn-how-to-github
+```
+
+You can check again the content of `Learn-how-to-github`
+
+```{r eval=FALSE}
+ls
+```
+
+&nbsp;
+
+Here is a screen shot of the process. As you can see, `Learn-how-to-github` is added and there is nothing inside it yet.
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/git clone.jpg")
+```
+
+
+\newpage
+
+# Make a change to repository and `git add`
+
+After repository is cloned, we either add new files or modify an existing file. In this case, we add add a new folder with four files. In the finder, I add a folder called `screenshots` with four `.jpg` files in them.
+
+In the terminal, we check the status of the cloned folder using `git status`.
+
+&nbsp;
+
+> _**NOTE:** `git status` is used to check any changes including modification of codes inside a file (if any)._
+
+&nbsp;
+
+```{r eval=FALSE}
+git status
+```
+
+The changes will be noted in red font. We either _accept_ to update the changes in the repository or _ignore_ it. To _accept_ and upload the changes, there are **three** steps:
+
+* `git add` to ....
+* `git commit` to ....
+* and `git push` to ....
+
+&nbsp;
+
+To `git add`, there are three ways in this case. The first one _add screenshots/_ only, and the other two _add all_.
+
+&nbsp;
+
+```{r eval=FALSE}
+git add screenshots/
+
+git add -A
+
+git add .
+```
+
+Check the status again
+
+```{r eval=FALSE}
+git status
+```
+
+&nbsp;
+
+Here is a screen shot of the process. After `git add`, the status shows four files in green font. These files are changes to be _committed_.
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/git add.jpg")
+```
+
+
+\newpage
+
+# Commit changes in repository with `git commit`
+
+The next step after `git add` that adds the changes is to _lock_ the changes. This _locking_ does not mean applying the changes, which is done using `git push`.
+
+To commit changes, type `git commit` and `-m` with a message inside quotes.
+
+&nbsp;
+
+```{r eval=FALSE}
+git commit -m "Screen shots used in the final product are added"
+```
+
+&nbsp;
+
+At this stage, the change is committed but it is still on the computer and not synchronized with github.com repository. To sync, type `git push`
+
+&nbsp;
+
+```{r eval=FALSE}
+git push
+```
+
+&nbsp;
+
+Here is a screen shot of the process. After `git add`, there is `git commit` and finally `git push`. Now the files are synchronized with github.com
+
+&nbsp;
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/git commit and push.jpg")
+```
+
+
+\newpage
+
+# Workflow
+
+So far, all we discussed was to set up a new repository / project, and commit changes. Other times, we have to `pull` changes others make in the project. 
+
+&nbsp;
+
+The first thing one does when starting the day to work on a collaborative project is to change directory to the github repository/project using `cd` and request a `pull` of all the changes.
+
+&nbsp;
+
+```{r eval=FALSE}
+cd ~/documents/github/learn-how-to-github
+git pull
+```
+
+&nbsp;
+
+
+
+First thing we `git pull` to get updates from everybody (if others work).
+
+
+\newpage
+
+# Others
+
+To see all commands we can use and what they do, just type `git`.
+
+&nbsp;
+
+```{r echo=FALSE, out.width="100%"}
+include_graphics("~/Downloads/Learn how to github/screenshots/git.jpg")
+```
+
+
+
