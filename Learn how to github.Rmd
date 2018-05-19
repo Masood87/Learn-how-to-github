@@ -48,6 +48,7 @@ After a new repository is created, copy the `clone url` link. This link is used 
 include_graphics("~/Downloads/Learn how to github/screenshots/copy clone url.jpg")
 ```
 
+
 \newpage
 
 # Set working directory
