@@ -1,6 +1,6 @@
 ---
 title: \vspace{3.5in}"Learn how to github"
-author: "Prepared by: [Sayed Masood Sadat](mailto: sayedmasood.sadat@asiafoundation.org)"
+author: "Prepared by: [Masood Sadat](mailto: masood.sdt@gmail.com)"
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
 output:
   pdf_document:
@@ -255,10 +255,7 @@ git pull
 
 &nbsp;
 
-
-
-First thing we `git pull` to get updates from everybody (if others work).
-
+More details coming up...
 
 \newpage
 
@@ -267,10 +264,5 @@ First thing we `git pull` to get updates from everybody (if others work).
 To see all commands we can use and what they do, just type `git`.
 
 &nbsp;
-
-```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/git.jpg")
-```
-
 
 
