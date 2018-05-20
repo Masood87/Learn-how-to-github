@@ -30,7 +30,7 @@ Go to [`github.com`](https://github.com) and create an account. Once, account is
 &nbsp;
 
 ```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/create repository.jpg")
+include_graphics("~/Documents/GitHub/learn-how-to-github/screenshots/create repository.jpg")
 ```
 
 
@@ -45,7 +45,7 @@ After a new repository is created, copy the `clone url` link. This link is used 
 &nbsp;
 
 ```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/copy clone url.jpg")
+include_graphics("~/Documents/GitHub/learn-how-to-github/screenshots/copy clone url.jpg")
 ```
 
 
@@ -99,7 +99,7 @@ ls
 Here is a screen shot of the process. As you can see, there are already three folders in the working directory.
 
 ```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/set working directory.jpg")
+include_graphics("~/Documents/GitHub/learn-how-to-github/screenshots/set working directory.jpg")
 ```
 
 
@@ -145,7 +145,7 @@ ls
 Here is a screen shot of the process. As you can see, `Learn-how-to-github` is added and there is nothing inside it yet.
 
 ```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/git clone.jpg")
+include_graphics("~/Documents/GitHub/learn-how-to-github/screenshots/git clone.jpg")
 ```
 
 
@@ -198,7 +198,7 @@ git status
 Here is a screen shot of the process. After `git add`, the status shows four files in green font. These files are changes to be _committed_.
 
 ```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/git add.jpg")
+include_graphics("~/Documents/GitHub/learn-how-to-github/screenshots/git add.jpg")
 ```
 
 
@@ -233,7 +233,7 @@ Here is a screen shot of the process. After `git add`, there is `git commit` and
 &nbsp;
 
 ```{r echo=FALSE, out.width="100%"}
-include_graphics("~/Downloads/Learn how to github/screenshots/git commit and push.jpg")
+include_graphics("~/Documents/GitHub/learn-how-to-github/screenshots/git commit and push.jpg")
 ```
 
 
