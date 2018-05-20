@@ -245,13 +245,13 @@ So far, all we discussed was to set up a new repository / project, and commit ch
 
 &nbsp;
 
-The first thing one does when starting the day to work on a collaborative project is to change directory to the github repository/project using `cd` and request a `pull` of all the changes.
+The first thing one does when starting the day to work on a collaborative project is to see all the changes others have made to the github repository/project. To do that, `git pull` is used when in the relevant directory (check your directory using `pwd`). However, before _pulling_ the changes, it is advised to check the changes using `git diff` or `git fetch`.
 
 &nbsp;
 
 ```{r eval=FALSE}
 cd ~/documents/github/learn-how-to-github
-git pull
+git fetch
 ```
 
 &nbsp;
